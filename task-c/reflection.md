@@ -1,40 +1,11 @@
 # Task C — Research Reflection
 
 > **BAFAD Accelerated Research Track · Fall 2026**
-> Complete **after** finishing Tasks A and B.
-
----
-
-## Instructions
-
-Write your responses directly in this file (replace the placeholder text).
-Aim for **150–200 words total** across both questions.
-Be specific — reference your actual experience with the data and code.
-
----
 
 ## Question 1 — Connecting the Work to Research
 
-*After completing Tasks A and B, how does hands-on data exploration relate to the research problem described in **Anomaly Detection in Tactical Sensor Streams** (the document you read before the Canvas quiz)?*
-
-Consider: What patterns did you observe in the SMAP data? How might those patterns complicate or inform the design of an autoencoder-based anomaly detector?
-
-**Your response (75–100 words):**
-
-> _Replace this text with your answer._
-
----
+The SMAP sample had 500 timesteps across 25 telemetry channels, but only 24 rows (4.8%) were labelled anomalous. I noticed that channel 00’s normal and anomaly values overlap a lot, so a single-channel threshold may miss unusual events. The heatmap is useful because it lets me compare several channels at once and look for coordinated changes. This connects to the BAFAD anomaly-detection problem because an autoencoder may need to learn normal multichannel patterns, not just identify extreme values in one channel. Rare anomalies also make careful evaluation important.
 
 ## Question 2 — Self-Assessment of Readiness
 
-*What specific gaps in your current knowledge — Python skills, statistics concepts, or ML background — do you expect to encounter if you join the research group? What is your plan for addressing them?*
-
-Be honest. There are no wrong answers — this helps us plan the onboarding schedule.
-
-**Your response (75–100 words):**
-
-> _Replace this text with your answer._
-
----
-
-*Submission: commit this file to your fork and include it in the GitHub repo URL you submit on Canvas.*
+I am still building confidence with Python data analysis, especially pandas groupby operations, plotting, and interpreting statistical summaries. I also have limited hands-on machine-learning experience, so concepts like training an autoencoder, choosing evaluation metrics, and avoiding overfitting will be new to me. I plan to review Python and pandas through small practice notebooks, revisit statistics from class, and work through introductory machine-learning material. I would also ask questions during onboarding, document what I learn, and practice by changing one part of a notebook at a time so I can understand the results instead of just copying code.
